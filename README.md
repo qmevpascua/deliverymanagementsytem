@@ -5,3 +5,5 @@
 + Justine Byron Aler
 + Jobart Josafat
 + Jahn Andrei De Guzman
+
+all updates are in master branch
