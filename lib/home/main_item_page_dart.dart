@@ -17,6 +17,7 @@ class _MainItemPageState extends State<MainItemPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.mainbgcolor,
       body: Column(
         children: [
           Container(
