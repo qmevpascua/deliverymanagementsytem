@@ -1,5 +1,6 @@
 import 'package:customer_delivery_system/utils/colors.dart';
 import 'package:customer_delivery_system/widgets/big_text.dart';
+import 'package:customer_delivery_system/widgets/icon_and_text_widget.dart';
 import 'package:customer_delivery_system/widgets/small_text.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -79,7 +80,11 @@ class _ItemPageBodyState extends State<ItemPageBody> {
                   SizedBox(height: 20,),
                   Row(
                     children: [
-
+                      IconAndTextWidget(
+                          icon: Icons.circle_sharp,
+                          text: "Normal",
+                          color: Colors.black87,
+                          iconColor: AppColors.shapecolor)
                     ],
                   )
                 ],
