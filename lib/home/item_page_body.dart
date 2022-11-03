@@ -1,5 +1,6 @@
 import 'package:customer_delivery_system/utils/colors.dart';
 import 'package:customer_delivery_system/widgets/big_text.dart';
+import 'package:customer_delivery_system/widgets/small_text.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -31,7 +32,7 @@ class _ItemPageBodyState extends State<ItemPageBody> {
       children: [
         Container(
           height: 220,
-          margin: EdgeInsets.only(left: 5,right: 5),
+          margin: EdgeInsets.only(left: 10,right: 10),
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20),
               color: index.isEven?AppColors.shapecolor:AppColors.shapecolor2,
@@ -48,15 +49,15 @@ class _ItemPageBodyState extends State<ItemPageBody> {
           alignment: Alignment.bottomCenter,
           child: Container(
 
-            height: 140,
-            margin: EdgeInsets.only(left: 30,right: 30,bottom: 20),
+            height: 130,
+            margin: EdgeInsets.only(left: 30,right: 30,bottom: 33),
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(20),
                 color: AppColors.white,
 
             ),
             child: Container(
-              padding: EdgeInsets.only(top: 10,left: 15,right: 15),
+              padding: EdgeInsets.only(top: 15,left: 15,right: 15),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -66,7 +67,19 @@ class _ItemPageBodyState extends State<ItemPageBody> {
                     children: [
                       Wrap(
                         children: List.generate(5, (index) => Icon(Icons.star, color: AppColors.shapecolor2,size: 15,)),
-                      )
+                      ),
+                      SizedBox(width: 10,),
+                      SmallText(text: "4.5", color: AppColors.textcolorlogin, size: 10,),
+                      SizedBox(width: 10,),
+                      SmallText(text: "123", color: AppColors.textcolorlogin, size: 12),
+                      SizedBox(width: 5,),
+                      SmallText(text: "comments", color: AppColors.textcolorlogin, size: 12),
+                    ],
+                  ),
+                  SizedBox(height: 20,),
+                  Row(
+                    children: [
+
                     ],
                   )
                 ],

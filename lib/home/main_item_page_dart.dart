@@ -23,12 +23,13 @@ class _MainItemPageState extends State<MainItemPage> {
           Container(
 
             child: Container(
-              margin: EdgeInsets.only(top: 45,bottom: 15),
+              margin: EdgeInsets.only(top: 47,bottom: 15),
               padding: EdgeInsets.only(left: 20, right: 20),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Column(
+                    // crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       BigText(text: "Welcome Back!", color: AppColors.shapecolor, size: 21,),
                       Row(
