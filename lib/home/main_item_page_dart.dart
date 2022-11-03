@@ -1,3 +1,5 @@
+import 'package:customer_delivery_system/utils/colors.dart';
+import 'package:customer_delivery_system/widgets/big_text.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -24,7 +26,7 @@ class _MainItemPageState extends State<MainItemPage> {
                 children: [
                   Column(
                     children: [
-                      Text("Welcome Back!"),
+                      BigText(text: "Welcome Back!", color: AppColors.shapecolor, size: 21,),
                       Text("City")
                     ],
                   ),
@@ -35,8 +37,7 @@ class _MainItemPageState extends State<MainItemPage> {
                       child: Icon(Icons.search, color: Colors.white,),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(15),
-                        // color: Colors.blue,
-                        color: Colors.blue,
+                        color: AppColors.shapecolor,
                       ),
                     ),
                   )
