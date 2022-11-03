@@ -14,7 +14,7 @@ class BigText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Text(
-      text,
+      text, maxLines: 1,
       overflow: overFlow,
       style: TextStyle(
         fontFamily: 'Inter',

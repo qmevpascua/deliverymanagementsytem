@@ -1,7 +1,10 @@
 import 'package:customer_delivery_system/utils/colors.dart';
 import 'package:customer_delivery_system/widgets/big_text.dart';
+import 'package:customer_delivery_system/widgets/small_text.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+import 'item_page_body.dart';
 
 class MainItemPage extends StatefulWidget {
   const MainItemPage({Key? key}) : super(key: key);
@@ -27,7 +30,12 @@ class _MainItemPageState extends State<MainItemPage> {
                   Column(
                     children: [
                       BigText(text: "Welcome Back!", color: AppColors.shapecolor, size: 21,),
-                      Text("City")
+                      Row(
+                        children: [
+                          SmallText(text: "FirstName", color: Colors.black87, size: 12,),
+                          Icon(Icons.arrow_drop_down_rounded ),
+                        ],
+                      )
                     ],
                   ),
                   Center(
@@ -44,7 +52,8 @@ class _MainItemPageState extends State<MainItemPage> {
                 ],
               ),
             ),
-          )
+          ),
+          ItemPageBody(),
         ],
       ),
     );
