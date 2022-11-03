@@ -1,8 +1,19 @@
 import 'package:customer_delivery_system/home/main_item_page_dart.dart';
 import 'package:flutter/material.dart';
+import 'login/login.dart';
+import 'login/register.dart';
+
 
 void main() {
   runApp(const MyApp());
+  runApp(MaterialApp(
+    debugShowCheckedModeBanner: false,
+    home: MyLogin(),
+    routes: {
+      'register': (context) => MyRegister(),
+      'login': (context) => MyLogin(),
+    },
+  ));
 }
 
 class MyApp extends StatelessWidget {
