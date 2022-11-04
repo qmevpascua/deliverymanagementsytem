@@ -200,14 +200,14 @@ List<Product> demoProducts = [
       ],
       category: "Jugs",
       colors: [
-        {"colorName": "Red Rose", "color": const Color(0xFFF6625E)},
-        {"colorName": "Purple", "color": const Color(0xFF836DB8)},
+        {"colorName": "1 jug", "color": const Color(0xFFF6625E)},
+        {"colorName": "3 jugs", "color": const Color(0xFF836DB8)},
       ],
       title: "5 Gallon Container",
       price: 250.00,
       description: {
         "headline": "Get this for only 250 pesos",
-        "description": description
+        "description": "Available now, at Elisha's Water Station …"
       },
       rating: 4.4,
       isFavourite: true,
