@@ -191,27 +191,49 @@ List<Product> demoProducts = [
     isFavourite: true,
     isPopular: true,
   ),
-  Product(
-    id: 6,
-    image: "assets/images/p6_1.png",
-    images: [
-      "assets/images/p6_1.png",
-    ],
-    category: "Jugs",
-    colors: [
-      {"colorName": "Red Rose", "color": const Color(0xFFF6625E)},
-      {"colorName": "Purple", "color": const Color(0xFF836DB8)},
-    ],
-    title: "5 Gallon Container",
-    price: 250.00,
-    description: {
-      "headline": "Get this for only 250 pesos",
-      "description": description
-    },
-    rating: 4.4,
-    isFavourite: true,
-    isPopular: true,
-  ),
+    Product(
+      id: 6,
+      image: "assets/images/p6_1.png",
+      images: [
+        "assets/images/p6_1.png",
+        "assets/images/p6_2.png",
+      ],
+      category: "Jugs",
+      colors: [
+        {"colorName": "Red Rose", "color": const Color(0xFFF6625E)},
+        {"colorName": "Purple", "color": const Color(0xFF836DB8)},
+      ],
+      title: "5 Gallon Container",
+      price: 250.00,
+      description: {
+        "headline": "Get this for only 250 pesos",
+        "description": description
+      },
+      rating: 4.4,
+      isFavourite: true,
+      isPopular: true,
+    ),
+  // Product(
+  //   id: 6,
+  //   image: "assets/images/p7.png",
+  //   images: [
+  //     "assets/images/p7.png",
+  //   ],
+  //   category: "Faucets",
+  //   colors: [
+  //     {"colorName": "3 containers", "color": const Color(0xFFF6625E)},
+  //     {"colorName": "1 container", "color": const Color(0xFF836DB8)},
+  //   ],
+  //   title: "5 Gallon Container",
+  //   price: 250.00,
+  //   description: {
+  //     "headline": "Get this for only 250 pesos",
+  //     "description": description
+  //   },
+  //   rating: 4.4,
+  //   isFavourite: true,
+  //   isPopular: true,
+  // ),
 ];
 
 const String description =
