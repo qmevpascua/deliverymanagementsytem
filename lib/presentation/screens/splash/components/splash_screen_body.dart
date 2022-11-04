@@ -31,7 +31,7 @@ class _SplashScreenBodyState extends State<SplashScreenBody>
           children: [
             const Flexible(
               flex: 2,
-              child: Text("Find Your\nGadget", style: splashHeadingTextStyle),
+              child: Text("Delivery\nMade Easy", style: splashHeadingTextStyle),
             ),
             Flexible(
               flex: 5,
@@ -42,7 +42,7 @@ class _SplashScreenBodyState extends State<SplashScreenBody>
                     SizedBox(
                       height: MediaQuery.of(context).size.height *
                           0.5, // 50 percent of screen's height
-                      child: Image.asset("assets/images/splash.png"),
+                      child: Image.asset("assets/images/undraw_delivery_truck_vt6p.png"),
                     ),
                     Container(
                       height: MediaQuery.of(context).size.height * 0.08,
