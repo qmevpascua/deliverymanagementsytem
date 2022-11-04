@@ -21,7 +21,7 @@ class CompleteProfileBody extends StatelessWidget {
               children: [
                 SizedBox(height: SizeConfig.screenHeight * 0.03),
                 Text("Complete $userName Profile",style: TextStyle(
-                    color: Colors.black,
+                    color: Colors.black87,
                     fontSize: SizeConfig.getProportionateScreenWidth(28),
                     fontWeight: FontWeight.bold,
                     letterSpacing: 2
@@ -35,7 +35,7 @@ class CompleteProfileBody extends StatelessWidget {
                 CompleteProfileForm(userData: userData),
                 SizedBox(height: SizeConfig.getProportionateScreenHeight(30)),
                 Text(
-                  "By continuing your confirm that you agree \nwith our Term and Condition",
+                  "By continuing your confirm that you agree \nwith our Terms and Condition",
                   textAlign: TextAlign.center,
                   style: Theme.of(context).textTheme.caption,
                 ),

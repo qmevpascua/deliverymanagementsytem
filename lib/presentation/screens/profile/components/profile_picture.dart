@@ -23,7 +23,7 @@ class ProfilePicture extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 const SizedBox(height: 25,),
-                const Text("Joe Doe",
+                const Text("Juan Dela Cruz",
                   style: TextStyle(
                     color: Colors.black,
                     fontSize: 15,
