@@ -88,7 +88,7 @@ List<Product> demoProducts = [
       {"colorName": "Gold", "color": const Color(0xFFDECB9C)},
     ],
     title: "Apple Watch",
-    price: 64.99,
+    price: 240.00,
     description: {
       "headline": "Get Apple TV+ free for a year",
       "description": description
@@ -185,6 +185,27 @@ List<Product> demoProducts = [
     price: 36.55,
     description: {
       "headline": "Get Apple TV+ free for a year",
+      "description": description
+    },
+    rating: 4.4,
+    isFavourite: true,
+    isPopular: true,
+  ),
+  Product(
+    id: 6,
+    image: "assets/images/p6_1.png",
+    images: [
+      "assets/images/p6_1.png",
+    ],
+    category: "Jugs",
+    colors: [
+      {"colorName": "Red Rose", "color": const Color(0xFFF6625E)},
+      {"colorName": "Purple", "color": const Color(0xFF836DB8)},
+    ],
+    title: "5 Gallon Container",
+    price: 250.00,
+    description: {
+      "headline": "Get this for only 250 pesos",
       "description": description
     },
     rating: 4.4,

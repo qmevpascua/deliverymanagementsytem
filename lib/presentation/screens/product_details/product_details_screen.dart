@@ -13,7 +13,7 @@ class ProductDetailsScreen extends StatelessWidget {
     final product = ModalRoute.of(context)!.settings.arguments as Product;
 
     return Scaffold(
-      backgroundColor: const Color(0xFFF5F6F9),
+      backgroundColor: const Color(0xFFe8f3ff),
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(150),
         child: CustomAppBar(

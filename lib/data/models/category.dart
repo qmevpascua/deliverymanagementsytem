@@ -35,6 +35,8 @@ class Category{
 
 
 List<Map<String, dynamic>> categories = [
+  {"title": "Jugs"},
+  {"title": "Faucets"},
   {"title": "Wearable"},
   {"title": "Laptop"},
   {"title": "Phones"},

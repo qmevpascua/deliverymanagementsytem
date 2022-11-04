@@ -2,6 +2,7 @@ import 'dart:async';
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/material.dart';
 import 'package:internet_connection_checker/internet_connection_checker.dart';
+import 'package:store/constants/colors.dart';
 import 'package:store/presentation/widgets/no_internet_connection.dart';
 import 'package:store/Utilities/size_config.dart';
 import 'components/custom_drawer.dart';
@@ -28,6 +29,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     SizeConfig.init(context);
     return  Scaffold(
+          // backgroundColor: lighterPrimaryColor,
           body:  SafeArea(
             child: (isDeviceConnected) ? Stack(
               children: const [

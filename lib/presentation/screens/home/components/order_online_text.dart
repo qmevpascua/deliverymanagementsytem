@@ -17,7 +17,7 @@ class OrderOnlineText extends StatelessWidget {
           horizontal: SizeConfig.getProportionateScreenWidth(25),
           vertical: SizeConfig.getProportionateScreenHeight(15)),
       child: const Text(
-        "Order online\ncollect in store",
+        "Order online\ndelivered to you",
         style: TextStyle(
           color: Colors.black,
           fontSize: 34,

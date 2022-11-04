@@ -96,7 +96,7 @@ class ProductDescription extends StatelessWidget {
                               fontSize: SizeConfig.getProportionateScreenWidth(14),
                               color: Colors.black,
                               )),
-                          Text("\$${product.price}",style: priceTextStyle,),
+                          Text("\₱${product.price}",style: priceTextStyle,),
                         ],
                     ),
                      ),

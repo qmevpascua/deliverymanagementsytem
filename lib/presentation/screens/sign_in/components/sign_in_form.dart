@@ -71,7 +71,7 @@ class _SignInFormState extends State<SignInForm> {
                     child: const Text(
                       "Forgot Password?",
                       style: TextStyle(
-                          color: primaryColor,
+                          color: lighterPrimaryColor,
                           decoration: TextDecoration.underline,
                           fontWeight: FontWeight.bold),
                     ),
