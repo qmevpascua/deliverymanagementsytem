@@ -91,7 +91,7 @@ List<Product> demoProducts = [
       "headline": "Get this for only 250 pesos",
       "description": "Available now, at Elisha's Water Station …"
     },
-    rating: 4.4,
+    rating: 4.9,
     isFavourite: true,
     isPopular: true,
   ),
@@ -114,7 +114,7 @@ List<Product> demoProducts = [
       "description": "Available now at Elisha's Water Station!"
     },
     rating: 4.4,
-    isFavourite: true,
+    isFavourite: false,
     isPopular: true,
   ),
   // Product(
