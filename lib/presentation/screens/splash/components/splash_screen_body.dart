@@ -29,8 +29,9 @@ class _SplashScreenBodyState extends State<SplashScreenBody>
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
+            // SizedBox(height: MediaQuery.of(context).size.height * 0.05,),
             const Flexible(
-              flex: 2,
+              flex: 3,
               child: Text("Water Delivery\nMade Easy", style: splashHeadingTextStyle),
             ),
             Flexible(
@@ -41,12 +42,12 @@ class _SplashScreenBodyState extends State<SplashScreenBody>
                   children: [
                     SizedBox(
                       height: MediaQuery.of(context).size.height *
-                          0.5, // 50 percent of screen's height
+                          0.3, // 50 percent of screen's height
                       child: Image.asset("assets/images/undraw_delivery_truck_vt6p.png"),
                     ),
                     Container(
                       height: MediaQuery.of(context).size.height * 0.08,
-                      decoration: const BoxDecoration(color: primaryColor),
+                      decoration: const BoxDecoration(color: Colors.transparent/*primaryColor*/),
                     )
                   ],
                 ),
@@ -63,7 +64,7 @@ class _SplashScreenBodyState extends State<SplashScreenBody>
               title: "Get Started",
             ),
             const SizedBox(
-              height: 10,
+              height: 15,
             )
           ],
         ),

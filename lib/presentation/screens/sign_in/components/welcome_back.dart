@@ -18,7 +18,7 @@ class WelcomeBack extends StatelessWidget {
               child: const CustomCircle(
                 width: 25,
                 height: 25,
-                color: primaryColor,
+                color: lighterPrimaryColor,
               )),
           Positioned(
               top: MediaQuery.of(context).size.height * -0.065,
@@ -49,7 +49,7 @@ class WelcomeBack extends StatelessWidget {
               child: const CustomCircle(
                 width: 35,
                 height: 35,
-                color: primaryColor,
+                color: lightPrimaryColor,
                 borderWidth: 4,
               )),
         ],
