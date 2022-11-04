@@ -6,7 +6,11 @@ class DrawerItem{
   late IconData icon;
   late String pageUrl;
   late bool lastItem;
-  DrawerItem({required this.title,required this.icon,required this.pageUrl,required this.lastItem});
+  DrawerItem({
+    required this.title,
+    required this.icon,
+    required this.pageUrl,
+    required this.lastItem});
 }
 
 List<DrawerItem> drawerItems = [
