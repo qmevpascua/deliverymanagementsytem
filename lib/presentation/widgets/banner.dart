@@ -5,7 +5,9 @@ import 'package:store/Utilities/size_config.dart';
 class CustomBanner extends StatelessWidget {
   final String text;
   final Color backgroundColor;
-  const CustomBanner({Key? key, required this.text, required this.backgroundColor}) : super(key: key);
+  const CustomBanner({Key? key,
+    required this.text,
+    required this.backgroundColor}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

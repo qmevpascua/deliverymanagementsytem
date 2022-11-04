@@ -31,7 +31,7 @@ class _SplashScreenBodyState extends State<SplashScreenBody>
           children: [
             const Flexible(
               flex: 2,
-              child: Text("Delivery\nMade Easy", style: splashHeadingTextStyle),
+              child: Text("Water Delivery\nMade Easy", style: splashHeadingTextStyle),
             ),
             Flexible(
               flex: 5,
