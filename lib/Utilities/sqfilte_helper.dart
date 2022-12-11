@@ -11,7 +11,9 @@ class SqliteDbHelper{
 
   final String usersTable = "CREATE TABLE users(id Integer PRIMARY KEY AutoIncrement,firstName TEXT NOT NULL,lastName TEXT NOT NULL,phoneNumber TEXT NOT NULL,address TEXT NOT NULL,email TEXT NOT NULL, password TEXT NOT NULL)";
   final String cartTable = "CREATE TABLE cart(id INTEGER PRIMARY KEY, name TEXT )";
-  final String productTable = "CREATE TABLE product(id INTEGER PRIMARY KEY,title TEXT NOT NULL, description TEXT NOT NULL, images TEXT, colors TEXT, rating REAL, price REAL, isFavourite INTEGER, isPopular INTEGER)";
+  final String productTable = "CREATE TABLE product(id INTEGER PRIMARY KEY, title TEXT NOT NULL, "
+                              "description TEXT NOT NULL, images TEXT, colors TEXT, rating REAL, "
+                              "price REAL, isFavourite INTEGER, isPopular INTEGER)";
 
   static final SqliteDbHelper _sqliteDbHelper =  SqliteDbHelper._internal();
 

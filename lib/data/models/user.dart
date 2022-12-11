@@ -6,7 +6,8 @@ class User{
   late final String email;
   late final String password;
 
-  User({required this.firstName,required this.lastName, required this.phoneNumber, required this.address,required this.email, required this.password});
+  User({required this.firstName,required this.lastName, required this.phoneNumber,
+    required this.address,required this.email, required this.password});
 
   Map<String, dynamic> toMap()
   {

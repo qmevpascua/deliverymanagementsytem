@@ -2,7 +2,7 @@
     package="com.my_store.store">
     <uses-permission android:name="android.permission.INTERNET" />
    <application
-        android:label="Your Store"
+        android:label="Elisha's Well"
         android:name="${applicationName}"
         android:icon="@mipmap/logo">
         <activity
