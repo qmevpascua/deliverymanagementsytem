@@ -8,6 +8,8 @@ import 'package:store/presentation/screens/home/home_screen.dart';
 import 'package:store/presentation/screens/sign_up/sign_up_screen.dart';
 import 'package:store/presentation/widgets/custom_button.dart';
 import 'package:store/presentation/widgets/custom_page_transition.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+
 
 class SignInForm extends StatefulWidget {
   const SignInForm({Key? key}) : super(key: key);
@@ -17,14 +19,43 @@ class SignInForm extends StatefulWidget {
 }
 
 class _SignInFormState extends State<SignInForm> {
+  final FirebaseAuth _auth = FirebaseAuth.instance;
   final SqliteDbHelper _sqliteDbHelper = SqliteDbHelper();
   final _formKey = GlobalKey<FormState>();
   final _emailFormFieldKey = GlobalKey<FormFieldState>();
   final _passwordFormFieldKey = GlobalKey<FormFieldState>();
   String? email, password;
+  Future<void> signInWithFirebase() async {
+    if (_formKey.currentState!.validate()) {
+      _formKey.currentState!.save();
+
+      try {
+        UserCredential userCredential = await _auth.signInWithEmailAndPassword(
+          email: email!,
+          password: password!,
+        );
+
+        // If sign in is successful, navigate to the home screen
+        if (userCredential.user != null) {
+          KeyboardUtil.hideKeyboard(context);
+          Navigator.pushReplacementNamed(context, HomeScreen.routeName);
+        }
+      } catch (e) {
+        // Handle sign in errors here
+        print('Sign in error: $e');
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text("Failed to sign in. Please check your credentials."),
+            backgroundColor: Colors.red,
+          ),
+        );
+      }
+    }
+  }
   late FocusNode passwordFocusNode;
   String paswordFieldSuffixText = "Show";
   bool _obscureText = true;
+  
   @override
   void initState() {
     super.initState();
@@ -85,28 +116,7 @@ class _SignInFormState extends State<SignInForm> {
                   backgroundColor: primaryColor,
                   forgroundColor: Colors.white,
                   width: MediaQuery.of(context).size.width * 0.85,
-                  onPressed: () async {
-                    if (_formKey.currentState!.validate()) {
-                      _formKey.currentState!.save();
-                      // Check user Identity
-                      bool result = await _sqliteDbHelper.checkIdentity(
-                          email: email, password: password);
-                      if (result) {
-                        KeyboardUtil.hideKeyboard(context);
-                        Navigator.push(
-                            context,
-                            CustomScaleTransition(
-                                nextPageUrl: HomeScreen.routeName,
-                                nextPage: const HomeScreen()));
-                      } else {
-                        ScaffoldMessenger.of(context)
-                            .showSnackBar(const SnackBar(
-                          content: Text("Please check your email or password"),
-                          backgroundColor: Colors.black38,
-                        ));
-                      }
-                    }
-                  },
+                  onPressed: signInWithFirebase,
                 ),
                 SizedBox(
                   height: MediaQuery.of(context).size.height * 0.03,

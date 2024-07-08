@@ -3,6 +3,8 @@ import 'package:store/constants/colors.dart';
 import 'package:store/constants/form_messages.dart';
 import 'package:store/presentation/screens/complete_profile/complete_profile.dart';
 import 'package:store/presentation/widgets/custom_button.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+
 
 class SignUpForm extends StatefulWidget {
   const SignUpForm({Key? key}) : super(key: key);
@@ -56,12 +58,24 @@ class _SignUpFormState extends State<SignUpForm> {
               backgroundColor: primaryColor,
               forgroundColor: Colors.white,
               width: MediaQuery.of(context).size.width * 0.85,
-              onPressed: () {
+              onPressed: () async {
                 if (_formKey.currentState!.validate()) {
                   _formKey.currentState!.save();
-                  Navigator.pushNamed(context, CompleteProfileScreen.routeName,
-                      arguments:
-                          ScreenArgs(email: email!, password: password!));
+                  try {
+                    UserCredential userCredential = await FirebaseAuth.instance.createUserWithEmailAndPassword(
+                      email: email!,
+                      password: password!,
+                    );
+                    // Navigate to complete profile screen or any other screen
+                    Navigator.pushNamed(
+                      context,
+                      CompleteProfileScreen.routeName,
+                      arguments: ScreenArgs(email: email!, password: password!),
+                    );
+                  } catch (e) {
+                    // Handle error, e.g., display error message
+                    print('Error occurred: $e');
+                  }
                 }
               },
             ),

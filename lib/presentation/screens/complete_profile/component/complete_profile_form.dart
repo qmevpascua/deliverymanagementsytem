@@ -10,6 +10,8 @@ import 'package:store/Utilities/sqfilte_helper.dart';
 import 'package:store/constants/form_messages.dart';
 import 'package:store/presentation/screens/otp_screen/otp_screen.dart';
 import 'package:store/presentation/screens/sign_up/components/sign_up_form.dart';
+import 'firestore_service.dart';
+
 
 class CompleteProfileForm extends StatefulWidget {
   final ScreenArgs userData;
@@ -67,31 +69,27 @@ class _CompleteProfileFormState extends State<CompleteProfileForm> {
                 if (_formKey.currentState!.validate()) {
                   _formKey.currentState!.save();
                   try {
-                    bool result = await _sqliteDbHelper.checkEmail(
-                        email: widget.userData.email);
-
-                    if (result) {
-                      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-                        content: Text(
-                            "The email is already existed please try with another one"),
+                    User user = User(
+                      firstName: firstName!,
+                      lastName: lastName!,
+                      phoneNumber: phoneNumber!,
+                      address: address!,
+                      email: widget.userData.email,
+                      password: widget.userData.password,
+                    );
+                    await FirestoreService().createUser(user);
+                    Navigator.push(
+                      context,
+                      CustomScaleTransition(nextPageUrl: OTPScreen.routeName, nextPage: const OTPScreen()),
+                    );
+                  } catch (e) {
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      const SnackBar(
+                        content: Text("Failed to create user. Please try again later."),
                         backgroundColor: Colors.black38,
-                      ));
-                    } else {
-                      User user = User(
-                          firstName: firstName!,
-                          lastName: lastName!,
-                          phoneNumber: phoneNumber!,
-                          address: address!,
-                          email: widget.userData.email,
-                          password: widget.userData.password);
-                      await _sqliteDbHelper.insertUser(user);
-                      Navigator.push(
-                          context,
-                          CustomScaleTransition(
-                              nextPageUrl: OTPScreen.routeName,
-                              nextPage: const OTPScreen()));
-                    }
-                  } on Exception {}
+                      ),
+                    );
+                  }
                 }
               },
             ),
