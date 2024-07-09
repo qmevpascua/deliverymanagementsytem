@@ -11,6 +11,8 @@ import 'package:store/constants/form_messages.dart';
 import 'package:store/presentation/screens/otp_screen/otp_screen.dart';
 import 'package:store/presentation/screens/sign_up/components/sign_up_form.dart';
 import 'firestore_service.dart';
+import 'package:store/presentation/screens/home/home_screen.dart';
+
 
 
 class CompleteProfileForm extends StatefulWidget {
@@ -78,10 +80,8 @@ class _CompleteProfileFormState extends State<CompleteProfileForm> {
                       password: widget.userData.password,
                     );
                     await FirestoreService().createUser(user);
-                    Navigator.push(
-                      context,
-                      CustomScaleTransition(nextPageUrl: OTPScreen.routeName, nextPage: const OTPScreen()),
-                    );
+                    // Navigate straight to HomeScreen
+                    Navigator.pushReplacementNamed(context, HomeScreen.routeName);
                   } catch (e) {
                     ScaffoldMessenger.of(context).showSnackBar(
                       const SnackBar(

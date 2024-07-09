@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:store/Utilities/size_config.dart';
+import 'firestore_service.dart';
+
 
 class ProfilePicture extends StatelessWidget {
+  
   const ProfilePicture({Key? key}) : super(key: key);
 
   @override
@@ -23,7 +26,7 @@ class ProfilePicture extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 const SizedBox(height: 25,),
-                const Text("Juan Dela Cruz",
+                const Text("Name: Juan Dela Cruz",
                   style: TextStyle(
                     color: Colors.black,
                     fontSize: 15,
